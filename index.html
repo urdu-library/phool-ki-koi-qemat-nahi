@@ -51,21 +51,21 @@ header{
 <div id="book"></div>
 
 <script>
-const totalPages = 47;
-const imagePath = "./images";
+/* ========= صرف یہاں تبدیلی کریں ========= */
+const totalPages =47;   // کتاب کے کل صفحات
+const imagePath = ""; // امیجز فولڈر
+/* ======================================= */
 
 const book = document.getElementById("book");
 
-for (let i = 1; i <= totalPages; i++) {
+for(let i=1; i<=totalPages; i++){
   const img = document.createElement("img");
-  img.src = `${imagePath}/${String(i).padStart(3, "0")}.webp`;
+  img.src = `${imagePath}/${String(i).padStart(3,"0")}.webp`;
   img.loading = "lazy";
   img.className = "page";
-  img.onerror = () => img.style.display = "none";
   book.appendChild(img);
 }
 </script>
 
 </body>
 </html>
-
